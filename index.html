@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe's Personal Portfolio</title>
+    <meta name="description" content="Welcome to John Doe's personal portfolio. Explore my projects, skills, and get in touch.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to my personal webpage</h1>
+        <h2>I am creating this page as part of a course from Coursera</h2>
+        <div id="hamburger-icon">&#9776;</div> <!-- Hamburger icon -->
+    </header>
+    <nav id="nav-menu">
+        <a href="#about-me-section">About Me</a>
+        <a href="#sample-projects-section">Projects</a>
+        <a href="#skills-section">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <main>
+        <section id="about-me-section">
+            <h2>About Me</h2>
+            <p>I am currently enrolled in the the "Microsoft Full-Stack Developer Professional Certificate" available on Coursera and this simple page is part of a portfolio requested for one of the courses. </p>
+            
+            <p>My current job involves developing ASP.NET applications, using Blazor, ASP.NET, and WebAssembly.   There is much more to show, but this is just a sample project, so please treat it as such. In here, I had fun learning about Copilot, and using it as a helper tool when creating the project files.</p>
+        </section>
+        <section id="sample-projects-section">
+            <h2>Sample Projects</h2>
+            <div class="filter-buttons">
+                <button onclick="filterProjects('all')">All</button>
+                <button onclick="filterProjects('web')">Web Development</button>
+                <button onclick="filterProjects('mobile')">Mobile Development</button>
+                <button onclick="filterProjects('data')">Data Science</button>
+            </div>
+            <div class="projects">
+                <div class="project-card" data-category="web">
+                    <h3>Project 1</h3>
+                    <img src="https://live.staticflickr.com/2499/3762675948_9a2d1c153d_b.jpg" alt="Project 1" onclick="openLightbox(this)">
+                    <p>Web Development Project</p>
+                </div>
+                <div class="project-card" data-category="mobile">
+                    <h3>Project 2</h3>
+                    <img src="https://live.staticflickr.com/3531/3762674668_e7304c4bcd_b.jpg" alt="Project 2" onclick="openLightbox(this)">
+                    <p>Mobile Development Project</p>
+                </div>
+                <div class="project-card" data-category="data">
+                    <h3>Project 3</h3>
+                    <img src="https://live.staticflickr.com/2526/3762670210_2f8e234706_b.jpg" alt="Project 3" onclick="openLightbox(this)">
+                    <p>Data Science Project</p>
+                </div>
+                <div class="project-card" data-category="web">
+                    <h3>Project 4</h3>
+                    <img src="https://live.staticflickr.com/3422/3761872549_668db362a5_b.jpg" alt="Project 4" onclick="openLightbox(this)">
+                    <p>Another Web Development Project</p>
+                </div>
+            </div>
+        </section>
+        <section id="skills-section">
+            <h2>Skills</h2>
+            <ul>
+                <li class="skill">HTML</li>
+                <li class="skill">CSS</li>
+                <li class="skill">JavaScript</li>
+                <li class="skill">C#</li>
+                <li class="skill">ASP.NET</li>
+                <li class="skill">MudBlazor</li>
+                <li class="skill">Git</li>
+                <li class="skill">Responsive Design</li>
+                <li class="skill">RESTful APIs</li>
+                <li class="skill">Bogus, Faker</li>
+                <li class="skill">Moq, Mock</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contact-form" action="submit_form.php" method="post">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error-message" id="name-error"></span>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="email-error"></span>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <span class="error-message" id="message-error"></span>
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 John Doe</p>
+        <div class="social-media">
+            <a href="https://linkedin.com/in/johndoe" target="_blank">LinkedIn</a>
+            <a href="https://github.com/johndoe" target="_blank">GitHub</a>
+            <a href="mailto:johndoe@example.com">Email</a>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-image">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
